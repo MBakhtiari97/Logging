@@ -11,7 +11,8 @@ internal partial class Program
         //LogStartupMessage(logger, "fun");
         //logger.LogInformation("this is a log");
         //logger.LogWarning("this is a log");
-        logger.LogCritical("this is a log");
+        //logger.LogCritical("this is a log");
+        logger.LogError("this is a log");
     }
 
     [LoggerMessage(Level = LogLevel.Information, Message = "Hello World! Logging is {Description}.")]
