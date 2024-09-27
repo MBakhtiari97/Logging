@@ -9,6 +9,8 @@ internal partial class Program
         ILogger logger = factory.CreateLogger("Program");
         //Console.WriteLine("Hello, World!");
         //LogStartupMessage(logger, "fun");
+        //logger.LogInformation("this is a log");
+        //logger.LogWarning("this is a log");
         logger.LogCritical("this is a log");
     }
 
