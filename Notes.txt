@@ -54,5 +54,17 @@ also there is an enum for log levels and you can use it to remember log levels
     //     Not used for writing log messages. Specifies that a logging category should not
     //     write any messages.
     None
+-In logs you can define destinations to submit the log , like console , windows events , etc
 
-8
+--Modern .NET Logger:
+-by default log is included (injected) in web api and minimal api controller and program files
+-In new application types like blazor , also we can inject the ilogger and using them (like injecting
+that in .razor file with @inject on top of the page and then use it in that specific page)
+-The methods that previously mentioned (leike LogError , LogInformation , ...) are extension method , the
+only three real method that logger has , is "Log , BeginScope , IsEnabled".
+-Using (Simple logging) "Hello Log {0}", "Service" (Pass parameter) is fundamentally wrong in context of logging
+because it is not enough and in different providers with large datasets it may leads to miss data replacement ,
+instead we should use structral logging in these situations , becuase when we use this kind of logs , it depends to
+provider that how to retreat with the datas and parameters !
+
+14 
